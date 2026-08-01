@@ -1,0 +1,25 @@
+{
+  "name": "@repo/ui",
+  "version": "1.0.0",
+  "description": "base ui lib",
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "clsx": "^2.1.1"
+  }
+}

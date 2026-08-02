@@ -24,6 +24,9 @@ importers:
 
   apps:
     dependencies:
+      '@repo/i18n':
+        specifier: workspace:*
+        version: link:../packages/i18n
       '@repo/ui':
         specifier: workspace:*
         version: link:../packages/ui
@@ -33,6 +36,9 @@ importers:
       next:
         specifier: 16.2.12
         version: 16.2.12(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.102.0)
+      next-intl:
+        specifier: ^4.13.4
+        version: 4.13.4(next@16.2.12(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.102.0))(react@19.2.3)(typescript@5.9.3)
       react:
         specifier: 19.2.3
         version: 19.2.3

@@ -4,7 +4,9 @@
     "baseUrl": ".",
     "paths": {
       "@repo/ui": ["packages/ui/src"],
-      "@repo/ui/*": ["packages/ui/src/*"]
+      "@repo/ui/*": ["packages/ui/src/*"],
+      "@repo/i18n": ["packages/i18n/src"],
+      "@repo/i18n/*": ["packages/i18n/src/*"]
     }
   }
 }

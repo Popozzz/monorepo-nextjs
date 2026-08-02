@@ -478,7 +478,7 @@ export default function PlaylistCard({
 ```
 
 Notes:
-- `pt-0` on the Card makes the cover flush with the card top (tailwind-merge in `cn` drops the conflicting `py` top token).
+- `pt-0` on the Card makes the cover flush with the card top (tailwind-merge keeps both `py-(--card-spacing)` and `pt-0`; the flush cover works via the Tailwind v4 CSS cascade, the same mechanism as the vendored shadcn `has-[>img:first-child]:pt-0` variant).
 - The cover text is `aria-hidden` (decorative) because the name is repeated in the `<h3>` below. Card titles are real `<h3>` elements (the library's `CardTitle` renders a `div`).
 - Cover colors are hardcoded per the spec, not in i18n.
 

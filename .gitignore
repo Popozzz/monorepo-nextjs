@@ -14,6 +14,10 @@ dist/
 # storybook
 storybook-static/
 
+# tests
+test-results/
+playwright-report/
+
 # misc
 .DS_Store
 *.pem

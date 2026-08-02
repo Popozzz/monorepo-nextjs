@@ -8,7 +8,7 @@ import {
 } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@repo/i18n/routing";
-import LocaleSwitcher from "../components/LocaleSwitcher";
+import { LocaleSwitcher } from "@repo/components";
 import "../globals.css";
 
 const geistSans = Geist({

@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import AlbumCard from "../components/music/AlbumCard"
-import PlaylistCard from "../components/music/PlaylistCard"
+import { AlbumCard, PlaylistCard } from "@repo/components"
 
 export default async function MusicPage({
   params,

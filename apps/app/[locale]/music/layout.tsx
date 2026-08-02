@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import { setRequestLocale } from "next-intl/server"
-import MusicShell from "../components/music/MusicShell"
+import { MusicShell } from "@repo/components"
 
 export default async function MusicLayout({
   children,

@@ -1,13 +1,35 @@
 {
-  "name": "i18n",
+  "name": "@repo/i18n",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Shared internationalization configuration and messages",
+  "private": true,
+  "type": "module",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./routing": {
+      "types": "./src/routing.ts",
+      "default": "./src/routing.ts"
+    },
+    "./navigation": {
+      "types": "./src/navigation.ts",
+      "default": "./src/navigation.ts"
+    },
+    "./request": {
+      "types": "./src/request.ts",
+      "default": "./src/request.ts"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.15.1"
+  "dependencies": {
+    "next-intl": "^4.13.4"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
 }

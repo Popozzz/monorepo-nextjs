@@ -1,0 +1,29 @@
+{
+  "Metadata": {
+    "title": "创建 Next 应用",
+    "description": "由 create next app 生成"
+  },
+  "Home": {
+    "nextLogoAlt": "Next.js 标志",
+    "title": "开始使用：编辑 page.tsx 文件。",
+    "description": "需要入门指南或更多说明？前往 <templates>模板</templates> 或 <learning>学习中心</learning>。",
+    "deployNow": "立即部署",
+    "documentation": "文档",
+    "vercelLogoAlt": "Vercel 标志"
+  },
+  "HomePage": {
+    "title": "shadcn/ui 已就绪",
+    "description": "组件位于 packages/ui",
+    "buttons": {
+      "default": "默认",
+      "outline": "描边",
+      "secondary": "次要",
+      "ghost": "幽灵",
+      "destructive": "危险",
+      "link": "链接"
+    }
+  },
+  "Switcher": {
+    "label": "语言"
+  }
+}

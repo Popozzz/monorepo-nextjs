@@ -4,9 +4,9 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@repo/ui", "@repo/i18n"],
+  transpilePackages: ["@repo/ui", "@repo/i18n", "@repo/components"],
   experimental: {
-    optimizePackageImports: ["@repo/ui", "@repo/i18n"],
+    optimizePackageImports: ["@repo/ui", "@repo/i18n", "@repo/components"],
   },
 };
 

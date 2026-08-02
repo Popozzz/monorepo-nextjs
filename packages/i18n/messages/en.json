@@ -23,6 +23,28 @@
       "link": "Link"
     }
   },
+  "Music": {
+    "skipToContent": "Skip to main content",
+    "navLabel": "Main navigation",
+    "brand": "Music app",
+    "discover": "Discover",
+    "library": "Library",
+    "home": "Home",
+    "browse": "Browse",
+    "radio": "Radio",
+    "playlists": "Playlists",
+    "songs": "Songs",
+    "personalizedPicks": "Personalized picks",
+    "tabsLabel": "Content type",
+    "tabs": ["Music", "Podcasts", "Live", "Popular", "New Releases"],
+    "cta": "Call to action",
+    "section1": { "title": "Title", "subheading": "Subheading" },
+    "section2": { "title": "Title", "subheading": "Subheading" },
+    "playlistDescription": "Description of playlist",
+    "playlistsData": ["Playlist 1", "Playlist 2", "Playlist 3", "Playlist 4"],
+    "albumArtist": "Artist Name",
+    "albumGenres": ["R&B", "Indie pop", "Hip hop", "Electronic", "R&B", "Rock"]
+  },
   "Switcher": {
     "label": "Language"
   }

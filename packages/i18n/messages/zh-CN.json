@@ -23,6 +23,28 @@
       "link": "链接"
     }
   },
+  "Music": {
+    "skipToContent": "跳到主内容",
+    "navLabel": "主导航",
+    "brand": "音乐应用",
+    "discover": "发现",
+    "library": "音乐库",
+    "home": "首页",
+    "browse": "浏览",
+    "radio": "电台",
+    "playlists": "播放列表",
+    "songs": "歌曲",
+    "personalizedPicks": "个性化推荐",
+    "tabsLabel": "内容类型",
+    "tabs": ["音乐", "播客", "直播", "热门", "新发行"],
+    "cta": "行动号召",
+    "section1": { "title": "标题", "subheading": "副标题" },
+    "section2": { "title": "标题", "subheading": "副标题" },
+    "playlistDescription": "播放列表描述",
+    "playlistsData": ["播放列表 1", "播放列表 2", "播放列表 3", "播放列表 4"],
+    "albumArtist": "艺术家名称",
+    "albumGenres": ["节奏布鲁斯", "独立流行", "嘻哈", "电子", "节奏布鲁斯", "摇滚"]
+  },
   "Switcher": {
     "label": "语言"
   }

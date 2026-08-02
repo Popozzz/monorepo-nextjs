@@ -19,7 +19,7 @@ export default async function SegmentedControl() {
           className={
             index === 0
               ? "h-7 shrink-0 rounded-full bg-background px-3 text-sm font-medium whitespace-nowrap text-foreground"
-              : "h-7 shrink-0 rounded-full px-3 text-sm font-medium whitespace-nowrap text-muted-foreground"
+              : "h-7 shrink-0 rounded-full px-3 text-sm font-medium whitespace-nowrap text-foreground/70"
           }
         >
           {tab}

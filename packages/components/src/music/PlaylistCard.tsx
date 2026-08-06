@@ -1,4 +1,9 @@
-import { Card, CardContent } from "@repo/ui/components/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@repo/ui/components/card"
 
 const coverColors = ["#ffffff", "#ffee93", "#ffc1c1", "#f5f5f5"]
 
@@ -25,8 +30,8 @@ export default function PlaylistCard({
         </span>
       </div>
       <CardContent className="flex flex-col gap-1">
-        <h3 className="text-xl font-medium">{title}</h3>
-        <p className="text-base text-muted-foreground">{description}</p>
+        <CardTitle className="text-xl">{title}</CardTitle>
+        <CardDescription className="text-base">{description}</CardDescription>
       </CardContent>
     </Card>
   )

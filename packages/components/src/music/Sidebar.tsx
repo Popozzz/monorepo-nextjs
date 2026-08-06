@@ -30,8 +30,9 @@ export default function Sidebar() {
           <p className="px-2 py-2 text-xl font-semibold">{t("brand")}</p>
         </SidebarHeader>
         <SidebarContent>
-          <SidebarGroup>
-            <SidebarGroupLabel>{t("discover")}</SidebarGroupLabel>
+          <nav aria-label={t("navLabel")}>
+            <SidebarGroup>
+              <SidebarGroupLabel>{t("discover")}</SidebarGroupLabel>
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton
@@ -76,6 +77,7 @@ export default function Sidebar() {
               ))}
             </SidebarMenu>
           </SidebarGroup>
+          </nav>
         </SidebarContent>
       </SidebarRoot>
     </SidebarProvider>

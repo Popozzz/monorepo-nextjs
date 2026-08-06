@@ -3,6 +3,17 @@
 import { Home, ListMusic, Music, Radio, Search, Smile } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link, usePathname } from "@repo/i18n/navigation"
+import {
+  Sidebar as SidebarRoot,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+} from "@repo/ui/components/sidebar"
 
 export default function Sidebar() {
   const t = useTranslations("Music")
@@ -10,58 +21,63 @@ export default function Sidebar() {
   const isHomeActive = pathname === "/" || pathname === "/home"
 
   return (
-    <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col lg:flex">
-      <p className="px-6 py-6 text-xl font-semibold">{t("brand")}</p>
-      <nav aria-label={t("navLabel")} className="flex flex-col gap-6">
-        <div>
-          <p className="px-6 pb-1 text-xs font-medium text-muted-foreground">
-            {t("discover")}
-          </p>
-          <ul>
-            <li>
-              <Link
-                href="/"
-                aria-current={isHomeActive ? "page" : undefined}
-                className={
-                  isHomeActive
-                    ? "flex h-10 items-center gap-2 bg-muted px-6"
-                    : "flex h-10 items-center gap-2 px-6"
-                }
-              >
-                <Home className="size-4" />
-                {t("home")}
-              </Link>
-            </li>
-            <li className="flex h-10 items-center gap-2 px-6">
-              <Search className="size-4" />
-              {t("browse")}
-            </li>
-            <li className="flex h-10 items-center gap-2 px-6">
-              <Radio className="size-4" />
-              {t("radio")}
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="px-6 pb-1 text-xs font-medium text-muted-foreground">
-            {t("library")}
-          </p>
-          <ul>
-            <li className="flex h-10 items-center gap-2 px-6">
-              <ListMusic className="size-4" />
-              {t("playlists")}
-            </li>
-            <li className="flex h-10 items-center gap-2 px-6">
-              <Music className="size-4" />
-              {t("songs")}
-            </li>
-            <li className="flex h-10 items-center gap-2 px-6">
-              <Smile className="size-4" />
-              {t("personalizedPicks")}
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </aside>
+    <SidebarProvider className="w-fit shrink-0">
+      <SidebarRoot
+        collapsible="none"
+        className="sticky top-0 hidden h-screen shrink-0 lg:flex"
+      >
+        <SidebarHeader>
+          <p className="px-2 py-2 text-xl font-semibold">{t("brand")}</p>
+        </SidebarHeader>
+        <SidebarContent>
+          <SidebarGroup>
+            <SidebarGroupLabel>{t("discover")}</SidebarGroupLabel>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  render={
+                    <Link
+                      href="/"
+                      aria-current={isHomeActive ? "page" : undefined}
+                    />
+                  }
+                >
+                  <Home className="size-4" />
+                  {t("home")}
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              {[
+                { icon: Search, label: t("browse") },
+                { icon: Radio, label: t("radio") },
+              ].map(({ icon: Icon, label }) => (
+                <SidebarMenuItem key={label}>
+                  <SidebarMenuButton render={<span />}>
+                    <Icon className="size-4" />
+                    {label}
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroup>
+          <SidebarGroup>
+            <SidebarGroupLabel>{t("library")}</SidebarGroupLabel>
+            <SidebarMenu>
+              {[
+                { icon: ListMusic, label: t("playlists") },
+                { icon: Music, label: t("songs") },
+                { icon: Smile, label: t("personalizedPicks") },
+              ].map(({ icon: Icon, label }) => (
+                <SidebarMenuItem key={label}>
+                  <SidebarMenuButton render={<span />}>
+                    <Icon className="size-4" />
+                    {label}
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroup>
+        </SidebarContent>
+      </SidebarRoot>
+    </SidebarProvider>
   )
 }

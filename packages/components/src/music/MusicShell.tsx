@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import { getTranslations } from "next-intl/server"
+import { SidebarInset } from "@repo/ui/components/sidebar"
 import Sidebar from "./Sidebar"
 import TopNav from "./TopNav"
 
@@ -19,12 +20,12 @@ export default async function MusicShell({
         {t("skipToContent")}
       </a>
       <Sidebar />
-      <div className="flex min-w-0 flex-1 flex-col">
+      <SidebarInset>
         <TopNav />
-        <main id="main" className="flex-1 overflow-y-auto px-8 py-6 lg:px-20">
+        <div id="main" className="flex-1 overflow-y-auto px-8 py-6 lg:px-20">
           {children}
-        </main>
-      </div>
+        </div>
+      </SidebarInset>
     </div>
   )
 }

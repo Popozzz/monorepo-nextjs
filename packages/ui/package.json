@@ -27,6 +27,7 @@
   "packageManager": "pnpm@10.15.1",
   "devDependencies": {
     "@storybook/addon-docs": "^10.5.5",
+    "@storybook/addon-mcp": "^0.7.0",
     "@storybook/react-vite": "^10.5.5",
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19",

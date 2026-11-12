@@ -21,7 +21,8 @@
     "./request": {
       "types": "./src/request.ts",
       "default": "./src/request.ts"
-    }
+    },
+    "./messages/*": "./messages/*"
   },
   "scripts": {
     "lint": "eslint .",

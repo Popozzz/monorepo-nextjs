@@ -1,0 +1,34 @@
+{
+  "name": "@repo/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/components": "workspace:*",
+    "@repo/i18n": "workspace:*",
+    "@repo/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.6.7",
+    "@storybook/addon-mcp": "^0.7.0",
+    "@storybook/nextjs-vite": "^10.6.7",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "next": "16.2.12",
+    "next-intl": "^4.13.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "storybook": "^10.6.7",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5",
+    "vite": "^7.0.0"
+  }
+}

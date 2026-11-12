@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
-import { Button } from "./button"
+import { Button } from "@repo/ui/components/button"
 
 const meta = {
-  title: "Components/Button",
+  title: "UI/Button",
   component: Button,
   args: {
     children: "Button",

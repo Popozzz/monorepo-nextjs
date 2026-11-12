@@ -11,7 +11,9 @@
     "typecheck": "pnpm -r --if-present typecheck",
     "test": "pnpm -r --if-present test",
     "storybook": "pnpm --filter @repo/storybook storybook",
-    "build-storybook": "pnpm --filter @repo/storybook build-storybook"
+    "build-storybook": "pnpm --filter @repo/storybook build-storybook",
+    "commitlint": "commitlint --edit",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -22,11 +24,15 @@
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@commitlint/types": "^21.2.3",
     "@eslint/js": "^9.39.5",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.5",
     "eslint-plugin-react-hooks": "^7.1.1",
+    "husky": "^9.1.7",
     "typescript-eslint": "^8.65.0"
   }
 }

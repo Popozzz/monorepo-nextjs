@@ -1,0 +1,29 @@
+{
+  "name": "@repo/layouts",
+  "version": "1.0.0",
+  "description": "Shared layout components",
+  "private": true,
+  "type": "module",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "react": "19.2.3",
+    "typescript": "^5"
+  }
+}

@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { AlbumCard, PlaylistCard } from "@repo/components"
+import { Container } from "@repo/layouts"
 
 export default async function MusicPage({
   params,
@@ -14,7 +15,7 @@ export default async function MusicPage({
   const genres = t.raw("albumGenres") as string[]
 
   return (
-    <div className="flex flex-col gap-10">
+    <Container className="flex flex-col gap-10">
       <section aria-labelledby="playlists-heading" className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
           <h1 id="playlists-heading" className="text-3xl font-semibold tracking-tight">
@@ -47,6 +48,6 @@ export default async function MusicPage({
           ))}
         </div>
       </section>
-    </div>
+    </Container>
   )
 }

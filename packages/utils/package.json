@@ -1,13 +1,25 @@
 {
-  "name": "utils",
+  "name": "@repo/utils",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Shared utilities",
+  "private": true,
+  "type": "module",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.15.1"
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
 }

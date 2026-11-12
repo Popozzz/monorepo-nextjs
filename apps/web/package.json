@@ -1,5 +1,5 @@
 {
-  "name": "apps",
+  "name": "@repo/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,12 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
     "test:a11y": "playwright test"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
     "@repo/i18n": "workspace:*",
     "@repo/components": "workspace:*",
+    "@repo/layouts": "workspace:*",
     "lucide-react": "^1.28.0",
     "next-intl": "^4.13.4",
     "clsx": "^2.1.1",

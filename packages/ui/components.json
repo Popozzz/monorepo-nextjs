@@ -14,9 +14,9 @@
   "rtl": false,
   "aliases": {
     "components": "@repo/ui/components",
-    "hooks": "@repo/ui/hooks",
+    "hooks": "@repo/hooks",
     "lib": "@repo/ui/lib",
-    "utils": "@repo/ui/lib/utils",
+    "utils": "@repo/utils",
     "ui": "@repo/ui/components"
   },
   "menuColor": "default",

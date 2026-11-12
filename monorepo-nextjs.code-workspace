@@ -1,6 +1,6 @@
 {
   "folders": [
-    { "path": "apps" },
+    { "path": "apps/web" },
     { "path": "packages" }
   ],
   "settings": {}

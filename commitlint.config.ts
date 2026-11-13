@@ -1,5 +1,5 @@
-import type { UserConfig } from "@commitlint/types"
-import { RuleConfigSeverity } from "@commitlint/types"
+import type { UserConfig } from "@commitlint/types";
+import { RuleConfigSeverity } from "@commitlint/types";
 
 const scopes = [
   "web",
@@ -14,13 +14,14 @@ const scopes = [
   "deps",
   "ci",
   "repo",
-]
+  "agent",
+];
 
 const config: UserConfig = {
   extends: ["@commitlint/config-conventional"],
   rules: {
     "scope-enum": [RuleConfigSeverity.Error, "always", scopes],
   },
-}
+};
 
-export default config
+export default config;

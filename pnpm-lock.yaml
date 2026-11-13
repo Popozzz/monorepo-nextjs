@@ -58,6 +58,9 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
     devDependencies:
+      '@storybook/addon-a11y':
+        specifier: ^10.6.7
+        version: 10.6.7(storybook@10.6.7(@types/react@19.2.8)(react@19.2.3))
       '@storybook/addon-docs':
         specifier: ^10.6.7
         version: 10.6.7(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(storybook@10.6.7(@types/react@19.2.8)(react@19.2.3))
@@ -1580,6 +1583,11 @@ packages:
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
+  '@storybook/addon-a11y@10.6.7':
+    resolution: {integrity: sha512-ARd+bjfOYoICe00+svRgFsCVqV7RbN+wgi8yfRhk31kESR7NnTMBGiZD8vWv/r3xqul/Ddr1uR6mUK4lpH7sqw==}
+    peerDependencies:
+      storybook: ^10.6.7
 
   '@storybook/addon-docs@10.6.7':
     resolution: {integrity: sha512-R0SxB+sv99/V1H51JFh5CjiN5Ufpuh8Bho7iT8hhl1NMGLk76BBqq9l63XgCp4d+1k9mXz7BVu7zFLWdf+j/Rg==}
@@ -5798,6 +5806,12 @@ snapshots:
   '@sindresorhus/merge-streams@4.0.0': {}
 
   '@standard-schema/spec@1.1.0': {}
+
+  '@storybook/addon-a11y@10.6.7(storybook@10.6.7(@types/react@19.2.8)(react@19.2.3))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      axe-core: 4.12.1
+      storybook: 10.6.7(@types/react@19.2.8)(react@19.2.3)
 
   '@storybook/addon-docs@10.6.7(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(storybook@10.6.7(@types/react@19.2.8)(react@19.2.3))':
     dependencies:

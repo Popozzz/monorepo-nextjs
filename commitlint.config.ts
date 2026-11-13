@@ -14,12 +14,27 @@ const scopes = [
   "deps",
   "ci",
   "repo",
+];
+
+const types = [
   "agent",
+  "build",
+  "chore",
+  "ci",
+  "docs",
+  "feat",
+  "fix",
+  "perf",
+  "refactor",
+  "revert",
+  "style",
+  "test",
 ];
 
 const config: UserConfig = {
   extends: ["@commitlint/config-conventional"],
   rules: {
+    "type-enum": [RuleConfigSeverity.Error, "always", types],
     "scope-enum": [RuleConfigSeverity.Error, "always", scopes],
   },
 };

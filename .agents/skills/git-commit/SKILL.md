@@ -69,7 +69,7 @@ This repository is a pnpm workspace with `apps/web`, `apps/storybook`, and `pack
 | ci       | CI/CD configuration changes                     |
 | chore    | Maintenance tasks and miscellaneous changes     |
 | revert   | Revert a previous commit                        |
-| agent    | Agent related changes                           |
+| agent    | Agent skills, agent configuration, or agent workflow changes |
 
 ### Allowed Scopes
 
@@ -96,13 +96,15 @@ Scope is optional. When present, it must be one of the following values:
 - Cross-package or workspace-wide configuration → use `workspace` or `repo`.
 - Dependency or lockfile-only change → use `deps`.
 - Tooling, hooks, lint, or commitlint change → use `repo`.
+- Agent skill or agent configuration change under `.agents/` → use type `agent` (scope optional).
 
-Examples from this repository's history:
+Examples:
 
 ```text
 refactor(workspace): move app to apps/web and complete shared packages
 chore(storybook): unify ui and components stories in apps/storybook
 chore(repo): add husky and commitlint for commit message linting
+agent: add dependency update skill and refine git commit skill
 ```
 
 ## 4. Inspect Git Staging Area
@@ -128,7 +130,7 @@ Use `git diff --cached` as the only source of code changes when determining the 
 - Never execute `git add <file>`.
 - Never stage unstaged changes automatically.
 - Never include unstaged or untracked files in a commit.
-- Never commit unrelated files such as `.agents/`, `.DS_Store`, or editor temp files. If they are already staged, stop and ask the user to unstage them.
+- Never commit unrelated files such as `.DS_Store` or editor temp files. Changes under `.agents/` may be committed only when the user explicitly asks to commit agent skill files and those files are already staged.
 - Never modify the staging area.
 - Do not reset, restore, unstage, or otherwise modify the user's staged changes.
 - If no files are staged, stop immediately and ask the user to stage files.
@@ -166,6 +168,7 @@ test(utils): add cn helper unit tests
 build(deps): upgrade Next.js dependencies
 ci(repo): cache pnpm store in workflow
 chore(storybook): unify stories under apps/storybook
+agent: add dependency update workflow
 ```
 
 Without a scope:
@@ -336,7 +339,7 @@ Before executing `git commit`, verify all conditions:
 - [ ] The commit message complies with Husky and Commitlint rules.
 - [ ] The message passed the pre-commit `commitlint` check.
 - [ ] No unrelated changes are being silently combined.
-- [ ] No unrelated files (`.agents/`, `.DS_Store`, editor temp files) are staged.
+- [ ] No unrelated files (`.DS_Store`, editor temp files) are staged; any staged `.agents/` files were explicitly requested.
 - [ ] No hooks or validation checks are bypassed.
 - [ ] No push operation will be performed.
 

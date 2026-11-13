@@ -1,0 +1,27 @@
+$breakpoint-sm: 40rem !default;
+$breakpoint-md: 48rem !default;
+$breakpoint-lg: 64rem !default;
+$breakpoint-xl: 80rem !default;
+$breakpoint-2xl: 96rem !default;
+
+$radius-sm: calc(var(--radius) * 0.6) !default;
+$radius-md: calc(var(--radius) * 0.8) !default;
+$radius-lg: var(--radius) !default;
+$radius-xl: calc(var(--radius) * 1.4) !default;
+$radius-2xl: calc(var(--radius) * 1.8) !default;
+$radius-3xl: calc(var(--radius) * 2.2) !default;
+$radius-4xl: calc(var(--radius) * 2.6) !default;
+
+$z-index-base: 0 !default;
+$z-index-dropdown: 1000 !default;
+$z-index-sticky: 1020 !default;
+$z-index-fixed: 1030 !default;
+$z-index-modal-backdrop: 1040 !default;
+$z-index-modal: 1050 !default;
+$z-index-popover: 1060 !default;
+$z-index-tooltip: 1070 !default;
+
+$duration-fast: 150ms !default;
+$duration-normal: 200ms !default;
+$duration-slow: 300ms !default;
+$ease-standard: cubic-bezier(0.2, 0, 0, 1) !default;

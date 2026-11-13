@@ -1,14 +1,4 @@
 {
-  "folders": [
-    { "name": "root", "path": "." },
-    { "name": "web", "path": "apps/web" },
-    { "name": "storybook", "path": "apps/storybook" },
-    { "name": "components", "path": "packages/components" },
-    { "name": "hooks", "path": "packages/hooks" },
-    { "name": "i18n", "path": "packages/i18n" },
-    { "name": "layouts", "path": "packages/layouts" },
-    { "name": "ui", "path": "packages/ui" },
-    { "name": "utils", "path": "packages/utils" }
-  ],
+  "folders": [{ "name": "root", "path": "." }],
   "settings": {}
 }
